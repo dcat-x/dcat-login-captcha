@@ -1,0 +1,95 @@
+{
+    "name": "dcat-x/dcat-login-captcha",
+    "description": "Login captcha extension for Dcat Admin.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "php",
+        "laravel",
+        "dcat-admin",
+        "dcat",
+        "admin",
+        "login",
+        "captcha",
+        "extension"
+    ],
+    "authors": [
+        {
+            "name": "guanguans",
+            "email": "ityaozm@gmail.com",
+            "homepage": "https://www.guanguans.cn"
+        },
+        {
+            "name": "cooper",
+            "email": "myxiaoao@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/dcat-x/dcat-login-captcha",
+    "support": {
+        "issues": "https://github.com/dcat-x/dcat-login-captcha/issues",
+        "source": "https://github.com/dcat-x/dcat-login-captcha"
+    },
+    "require": {
+        "php": "^8.2",
+        "dcat-x/laravel-admin": "^1.0",
+        "gregwar/captcha": "^1.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "larastan/larastan": "^3.0",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "overtrue/phplint": "^9.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Guanguans\\DcatLoginCaptcha\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Guanguans\\DcatLoginCaptcha\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "dcat-admin": "Guanguans\\DcatLoginCaptcha\\LoginCaptchaServiceProvider",
+        "laravel": {
+            "aliases": {
+                "CaptchaBuilder": "Guanguans\\DcatLoginCaptcha\\Facades\\CaptchaBuilder",
+                "PhraseBuilder": "Guanguans\\DcatLoginCaptcha\\Facades\\PhraseBuilder"
+            },
+            "providers": [
+                "Guanguans\\DcatLoginCaptcha\\LoginCaptchaServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "./vendor/bin/phplint --configuration=.phplint.yml",
+        "phpstan": "./vendor/bin/phpstan analyse",
+        "style-fix": "./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php",
+        "style-lint": "./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --dry-run --diff",
+        "test": "./vendor/bin/phpunit --colors=always",
+        "test-coverage": "./vendor/bin/phpunit --colors=always --coverage-html=coverage/"
+    },
+    "scripts-descriptions": {
+        "lint": "Run PHP syntax linter",
+        "phpstan": "Run static analysis with PHPStan",
+        "style-fix": "Fix code style issues",
+        "style-lint": "Check code style issues",
+        "test": "Run PHPUnit tests",
+        "test-coverage": "Run PHPUnit tests with coverage report"
+    }
+}

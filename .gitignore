@@ -1,0 +1,15 @@
+/.idea/
+/.vscode/
+/.phpunit.cache/
+/build/
+/coverage/
+/vendor/
+
+*.cache
+.DS_Store
+.php-cs-fixer.cache
+.phpunit.result.cache
+clover.xml
+composer.lock
+phpunit.xml
+psalm.xml
