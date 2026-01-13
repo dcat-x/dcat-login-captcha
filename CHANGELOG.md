@@ -4,7 +4,13 @@ All notable changes to `dcat-x/dcat-login-captcha` will be documented in this fi
 
 ## [Unreleased]
 
-## [1.0.0] - 2025-01-13
+## [1.1.1] - 2025-01-13
+
+### Fixed
+
+- Fix duplicate captcha display in multi-application environments (e.g., admin + admin-merchant)
+
+## [1.1.0] - 2025-01-13
 
 ### Changed
 

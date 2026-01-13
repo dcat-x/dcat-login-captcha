@@ -26,13 +26,23 @@ class LoginCaptchaServiceProvider extends ServiceProvider
         'permission' => 'captcha/generate',
     ];
 
+    /**
+     * @var bool 防止在多应用环境下重复注册 BootingHandler
+     */
+    protected static bool $bootingHandlerRegistered = false;
+
     public function init()
     {
         parent::init();
         $this->setupConfig();
         $this->loadMigrationsFrom(__DIR__.'/../updates/2022_08_31_164022_update_admin_settings_for_dcat_login_captcha.php');
         $this->extendValidator();
-        Admin::booting($this->app->make(BootingHandler::class));
+
+        // 防止在多应用环境下重复注册 BootingHandler
+        if (! static::$bootingHandlerRegistered) {
+            Admin::booting($this->app->make(BootingHandler::class));
+            static::$bootingHandlerRegistered = true;
+        }
     }
 
     public function register()
