@@ -31,16 +31,16 @@
     },
     "require": {
         "php": "^8.2",
-        "dcat-x/laravel-admin": "^1.0",
+        "dcat-x/laravel-admin": "^1.0 || ^2.0",
         "gregwar/captcha": "^1.1"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
         "larastan/larastan": "^3.0",
         "mockery/mockery": "^1.6",
-        "orchestra/testbench": "^10.0",
+        "orchestra/testbench": "^10.0 || ^11.0",
         "overtrue/phplint": "^9.0",
-        "phpunit/phpunit": "^11.0"
+        "phpunit/phpunit": "^11.0 || ^12.0"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,

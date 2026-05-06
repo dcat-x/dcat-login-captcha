@@ -4,6 +4,14 @@ All notable changes to `dcat-x/dcat-login-captcha` will be documented in this fi
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-05-06
+
+### Changed
+
+- Support `dcat-x/laravel-admin` `^1.0 || ^2.0` (Laravel 12 & 13)
+- Loosen `orchestra/testbench` to `^10.0 || ^11.0`
+- Loosen `phpunit/phpunit` to `^11.0 || ^12.0`
+
 ## [1.1.1] - 2025-01-13
 
 ### Fixed

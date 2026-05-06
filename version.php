@@ -106,4 +106,12 @@ return [
         'Bump dependabot/fetch-metadata from 1.3.3 to 1.3.4.',
         'Bump actions/stale from 5 to 6.',
     ],
+    '1.1.1' => [
+        'Fix duplicate captcha display in multi-application environments.',
+    ],
+    '1.2.0' => [
+        'Support dcat-x/laravel-admin ^1.0 || ^2.0 (Laravel 12 & 13).',
+        'Loosen orchestra/testbench to ^10.0 || ^11.0.',
+        'Loosen phpunit/phpunit to ^11.0 || ^12.0.',
+    ],
 ];
